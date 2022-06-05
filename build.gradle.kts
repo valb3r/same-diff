@@ -45,6 +45,12 @@ tasks.getByName<Test>("test") {
     useJUnitPlatform()
 }
 
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(8))
+    }
+}
+
 //configurations.all {
 //    exclude("com.google.flatbuffers", "flatbuffers-java")
 //}
